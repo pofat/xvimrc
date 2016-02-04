@@ -1,0 +1,186 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Keybinds
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Bind ctrl+<movement> keys to move between windows, instead of ctrl+w+<movement>
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Map sort function
+vnoremap ,r :sort<CR>
+
+" Better (un)indentation of code blocks
+vnoremap < <gv
+vnoremap > >gv
+
+" Clear search highlighting
+noremap <silent>,/ :nohls<CR>
+
+" Map Q to repeat the last macro
+map Q @@
+
+" Remove ^M
+"noremap ,w :%s/\r//g<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Xcode Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle a breakpoint at the current line
+nmap ,b :xccmd toggleBreakpointAtCurrentLine<CR>
+
+" Toggle comments for the selection
+"nnoremap gcc :xccmd commentAndUncommentCurrentLines<CR>
+"vnoremap gc  :xccmd commentAndUncommentCurrentLines<CR>
+
+" Navigation
+"nnoremap ,o :xccmd openQuickly<cr>
+nmap ,n :nissue<CR>
+nmap ,p :pissue<CR>
+
+" Show
+"nmap ,g :xcmenucmd History...<CR>
+"nmap ,F :xccmd showInFinder<CR>
+"nmap ,D :xccmd showDeveloperDocumentation<CR>
+"nmap ,d :xcmenucmd Quick Help for Selected Item<CR>
+
+" Toggle Toolbars
+nmap ,h :xccmd toggleNavigatorsVisibility<CR>
+nmap ,j :xccmd toggleDebuggerVisibility<CR>
+nmap ,l :xccmd toggleUtilitiesVisibility<CR>
+
+" Building
+"nmap ,c :xmenucmd Clean<cr>
+"nmap ,b :xmenucmd Build<cr>
+"nmap ,r :xmenucmd Run<cr>
+
+" Tabs
+"nnoremap ,nt :xccmd newTab<cr>
+"nnoremap ,tp :xccmd selectPreviousTab<cr>
+"nnoremap ,tn :xccmd selectNextTab<cr>
+"map ,tc :tabclose<CR>
+
+" Search the workspace for string cursor points to
+map ,s viw:xccmd findSelectedTextInWorkspace<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Copy/Paste
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Better copy and paste
+set pastetoggle=<F2>
+
+" Paste mode - insert typed text literally
+set paste
+
+" Use the system pasteboard
+set pasteboard
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indentation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Number of spaces for a tab
+"set tabstop=4
+
+" Number of spaces for soft tab
+"set softtabstop=4
+
+" Number of spaces for shifting text
+"set shiftwidth=4
+
+" Inserting a tab inserts spaces
+"set sta
+
+" Expand tabs to spaces in insert mode
+"set expandtab
+
+" Turn on autoindent
+"set ai
+
+" Turn on smartindent
+"set si
+
+" Turn on c indent
+" set cin
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Commands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Command line history
+"set history=700
+
+" Number of undo changes to keep track of
+"set ul=700
+
+" Display incomplete commands
+"set showcmd
+
+" Some commands jump to first non-blank character
+"set sol
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Searching
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Highlight all matches
+set hlsearch
+
+" Incremental searching
+set incsearch
+
+" Dont ignore case while searching
+"set noic
+
+" Ignore case while searching
+set ignorecase
+
+" Intelligently override ignorecase
+set smartcase
+
+" Wrap searches
+set wrapscan
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Display
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" No status bar
+"set laststatus=0
+
+" Show the cursor position all the time
+"set ruler
+
+" Dont wrap text across lines
+"set nowrap
+
+" Dont wrap text while typing
+"set fo-=t
+
+" Show the line numbers for each line
+set number
+
+" Help window height
+"set hh=15
+
+" Remove toolbar
+"set guioptions-=T
+
+" Show matching brackets briefly during inserting
+"set sm
+
+" Tenths of seconds to show match
+"set mat=5
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Backspace
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Backspace and cursor keys wrap to previous/next line
+"set backspace=indent,eol,start whichwrap+=<,>,[,]
+
+" Backspace in Visual mode deletes selection
+"vnoremap <BS> d
+
