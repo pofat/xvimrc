@@ -15,7 +15,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Clear search highlighting
-noremap <silent>,/ :nohls<CR>
+noremap ,/ :nohls<CR>
 
 " Map Q to repeat the last macro
 map Q @@
@@ -148,7 +148,7 @@ set wrapscan
 " Display
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " No status bar
-"set laststatus=0
+set laststatus=0
 
 " Show the cursor position all the time
 "set ruler
